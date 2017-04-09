@@ -6,13 +6,19 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class Lab3 extends AppCompatActivity {
+    //Створити програмне забезпечення для знаходження булеану довільної нечіткої множини.
+
+    TextView enteredA;
+    TextView enteredE;
+    TextView result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_lab3);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -24,6 +30,12 @@ public class Lab3 extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        enteredA = (TextView) findViewById(R.id.enteredA);
+        enteredE = (TextView) findViewById(R.id.enteredE);
+        result = (TextView) findViewById(R.id.result);
+
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

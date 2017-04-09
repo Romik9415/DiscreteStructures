@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity
             intent = new Intent(this, Lab2.class);
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-            intent = new Intent(this, Lab2.class);
+            intent = new Intent(this, Lab3.class);
             startActivity(intent);
         }
 
