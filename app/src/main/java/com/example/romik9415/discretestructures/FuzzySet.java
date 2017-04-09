@@ -2,6 +2,7 @@ package com.example.romik9415.discretestructures;
 
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -102,22 +103,16 @@ public class FuzzySet {
     }
 
 
-    public static Set<FuzzySet> Boolean(List<String> inputSet,List<Double> inputVals){
-        Set<FuzzySet> B = new HashSet<>();
-        B.add(new FuzzySet());
-
+    public static List<FuzzySet> Boolean(List<String> inputSet,List<Double> inputVals){
+        List<FuzzySet> B = new ArrayList<>();
         List<int[]> list = new BruteForce(0,inputVals.size()-1,inputSet.size()).getBruteforceList();
-
         for (int[] vals : list) {
            FuzzySet f = new FuzzySet();
             for (int i=0;i<inputSet.size();i++) {
                 f.addElement(inputSet.get(i),inputVals.get(vals[i+1]));
             }
             B.add(f);
-            //Log.d("C_FS","added "+f.toStr());
         }
-
-        //for (FuzzySet f : B) {Log.d("C_FS", f.toStr());}
         return B;
     }
 

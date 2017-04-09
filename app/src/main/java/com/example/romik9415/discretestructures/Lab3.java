@@ -10,6 +10,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class Lab3 extends AppCompatActivity {
 
@@ -30,19 +31,26 @@ public class Lab3 extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        List<String> set = new ArrayList<String>();
-        set.add("el1");
-        set.add("el2");
-        set.add("el3");
-        set.add("el4");
+        //TODO: display
+        List<String> set = new ArrayList<>();
+        set.add("a");
+        set.add("b");
+        //set.add("c");
+        //set.add("d");
 
+        //TODO: display
         List<Double> vals = new ArrayList<>();
         vals.add(0d);
         vals.add(.45d);
         vals.add(1d);
 
-        Log.d("A_L3","TEST HERE");
-        FuzzySet.Boolean(set,vals);
+        List<FuzzySet> fuzzySetSet = FuzzySet.Boolean(set,vals);
+        Log.d("A_L3","Length: "+fuzzySetSet.size()+" expected= "+Math.pow(vals.size(),set.size()));
+        for (FuzzySet fuzzySet : fuzzySetSet) {
+            Log.d("A_L3",fuzzySet.toStr()); //TODO: display
+        }
+
+
     }
 
 

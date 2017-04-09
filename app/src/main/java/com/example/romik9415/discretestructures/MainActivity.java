@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-
+        startActivity(new Intent(this,Lab3.class));
     }
     //Start
 
