@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DiscreteStructures.iml" filepath="$PROJECT_DIR$/DiscreteStructures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Discretestructures.iml" filepath="$PROJECT_DIR$/Discretestructures.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
