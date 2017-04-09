@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-
+        startActivity(new Intent(this,Lab3.class));
     }
     //Start
 
@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         }
 
+        startActivity(new Intent(this,Lab3.class));
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

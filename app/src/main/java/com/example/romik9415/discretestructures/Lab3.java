@@ -5,8 +5,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class Lab3 extends AppCompatActivity {
     //Створити програмне забезпечення для знаходження булеану довільної нечіткої множини.
@@ -37,6 +42,28 @@ public class Lab3 extends AppCompatActivity {
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //TODO: display
+        List<String> set = new ArrayList<>();
+        set.add("a");
+        set.add("b");
+        //set.add("c");
+        //set.add("d");
+
+        //TODO: display
+        List<Double> vals = new ArrayList<>();
+        vals.add(0d);
+        vals.add(.45d);
+        vals.add(1d);
+
+        List<FuzzySet> fuzzySetSet = FuzzySet.Boolean(set,vals);
+        Log.d("A_L3","Length: "+fuzzySetSet.size()+" expected= "+Math.pow(vals.size(),set.size()));
+        for (FuzzySet fuzzySet : fuzzySetSet) {
+            Log.d("A_L3",fuzzySet.toStr()); //TODO: display
+        }
+
+
     }
+
 
 }
