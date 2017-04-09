@@ -50,15 +50,16 @@ public class Lab3 extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         set = new ArrayList<>();
-        set.add("a");
-        set.add("b");
-        //set.add("c");
-        //set.add("d");
+        set.add("x1");
+        set.add("x2");
+        set.add("x3");
+        set.add("x4");
 
         vals = new ArrayList<>();
-        vals.add(0d);
-        vals.add(.45d);
-        vals.add(1d);
+        vals.add(0.0);
+        vals.add(0.45);
+        vals.add(0.55);
+        vals.add(1.0);
 
         displayEnteredData();
     }
